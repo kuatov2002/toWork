@@ -1,0 +1,8 @@
+SELECT Products.Name, Categories.Name
+FROM Products
+LEFT JOIN ProductCategories ON Products.ID = ProductCategories.ProductID
+LEFT JOIN Categories ON ProductCategories.CategoryID = Categories.ID
+
+В этом запросе мы используем соединение таблицы LEFT JOIN, 
+чтобы включить в результаты все записи из таблицы Products, 
+даже если они не соответствуют ни одной категории в таблице ProductCategories.
